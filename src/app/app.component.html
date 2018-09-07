@@ -1,0 +1,12 @@
+<h3>Programmer Humor</h3>
+<article>
+  <div class="cards">
+    <div class="card" *ngFor="let reddit of reddits | slice:0:6;">
+      <img *ngIf=reddit.data.url src="{{reddit.data.url}}" alt="">
+      <h4>{{reddit.data.title}}</h4>
+      <h6>Added by {{reddit.data.author}} and has <span class="comments"><i class="fa fa-comment"></i> {{reddit.data.num_comments}}</span> comments</h6>
+      <button class="basicBtn"><a href="http://reddit.com/{{reddit.data.permalink}}" target="_blank">View Full Article</a></button>
+    </div>
+  </div>
+</article>
+
